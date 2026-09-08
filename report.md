@@ -124,14 +124,12 @@ This is consistent with the classical local-feature recognition pipeline describ
 
 For a planar object, we model the template-to-scene mapping as:
 
+For a planar object, we model the template-to-scene mapping as:
+
 $$
-\begin{bmatrix}u\\v\end{bmatrix}
-=
-\begin{bmatrix}
-a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}
-+
-\begin{bmatrix}b_1\\b_2\end{bmatrix}.
+u=a_{11}x+a_{12}y+b_1,
+\qquad
+v=a_{21}x+a_{22}y+b_2.
 $$
 
 With parameter vector
@@ -237,21 +235,21 @@ NMS proceeds greedily:
 
 ### Naive feature matching
 
-![Naive ratio-test correspondences](output/final/naive_matches.jpg)
+<img src="output/final/naive_matches.jpg" alt="Naive Matches" width="700">
 
 The naive visualization intentionally shows every ratio-test correspondence. It is expected to contain many unrelated lines caused by repeated textures, edges, text, background patterns and accidental descriptor similarity.
 
 ### Final detections
 
-![Final detections](output/final/final_detections.jpg)
+<img src="output/final/final_detections.jpg" alt="Final Detections" width="700">
 
 The final visualization contains the three accepted object instances, with projected template boundaries and minimal visual clutter.
 
 ### SIFT visualization
 
-![Template SIFT keypoints](output/final/template_sift_keypoints.jpg)
+<img src="output/final/template_sift_keypoints.jpg" alt="Template Sift Keypoints" width="100">
 
-![Scene SIFT keypoints](output/final/scene_sift_keypoints.jpg)
+<img src="output/final/scene_sift_keypoints.jpg" alt="Scene Sift Keypoints" width="700">
 
 ## 13. Experimental results
 
