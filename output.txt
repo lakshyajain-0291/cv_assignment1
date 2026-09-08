@@ -1,0 +1,6 @@
+Template keypoints: 1996
+Scene keypoints:    4634
+Ratio-test matches: 502
+Verified detections before NMS: 3
+Final detections after NMS: 3
+Outputs: output/final/

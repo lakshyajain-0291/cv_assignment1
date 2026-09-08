@@ -1,0 +1,147 @@
+Detection summary
+=================
+count: 13
+
+Detection 1
+  score: 3.2190
+  inliers: 35
+  mean reprojection error: 0.8582 px
+  scale (sqrt|det|): 0.4610
+  rotation estimate: 356.15 deg
+  bbox: (163, 46, 281, 282)
+  affine:
+[[ 4.245954e-01  1.297188e-02  1.633106e+02]
+ [-2.856877e-02  4.996791e-01  5.432215e+01]]
+
+Detection 2
+  score: 3.0677
+  inliers: 33
+  mean reprojection error: 0.8759 px
+  scale (sqrt|det|): 0.5005
+  rotation estimate: 356.33 deg
+  bbox: (258, 35, 386, 285)
+  affine:
+[[ 4.708994e-01  9.271402e-03  2.581437e+02]
+ [-3.020843e-02  5.314176e-01  4.316248e+01]]
+
+Detection 3
+  score: 2.9617
+  inliers: 34
+  mean reprojection error: 1.0041 px
+  scale (sqrt|det|): 0.6006
+  rotation estimate: 353.89 deg
+  bbox: (503, 2, 672, 289)
+  affine:
+[[ 6.100872e-01 -1.773060e-02  5.116941e+02]
+ [-6.529318e-02  5.932440e-01  1.939235e+01]]
+
+Detection 4
+  score: 2.9494
+  inliers: 29
+  mean reprojection error: 1.1402 px
+  scale (sqrt|det|): 0.5227
+  rotation estimate: 15.19 deg
+  bbox: (535, 354, 680, 599)
+  affine:
+[[ 5.055578e-01 -2.473052e-02  5.471538e+02]
+ [ 1.372846e-01  5.336989e-01  3.541429e+02]]
+
+Detection 5
+  score: 2.9453
+  inliers: 29
+  mean reprojection error: 1.1512 px
+  scale (sqrt|det|): 0.6445
+  rotation estimate: 354.35 deg
+  bbox: (636, 0, 799, 290)
+  affine:
+[[ 6.777565e-01 -2.435827e-02  6.471131e+02]
+ [-6.709777e-02  6.152761e-01  1.018423e+01]]
+
+Detection 6
+  score: 2.8960
+  inliers: 28
+  mean reprojection error: 0.9256 px
+  scale (sqrt|det|): 0.6361
+  rotation estimate: 7.87 deg
+  bbox: (682, 367, 799, 599)
+  affine:
+[[ 7.006343e-01 -3.576101e-02  6.988964e+02]
+ [ 9.679379e-02  5.725068e-01  3.676792e+02]]
+
+Detection 7
+  score: 2.8358
+  inliers: 27
+  mean reprojection error: 0.9997 px
+  scale (sqrt|det|): 0.5556
+  rotation estimate: 356.85 deg
+  bbox: (394, 21, 542, 285)
+  affine:
+[[ 5.508070e-01 -7.213472e-03  3.973959e+02]
+ [-3.035016e-02  5.609261e-01  2.986718e+01]]
+
+Detection 8
+  score: 2.7725
+  inliers: 33
+  mean reprojection error: 1.0089 px
+  scale (sqrt|det|): 0.4441
+  rotation estimate: 359.88 deg
+  bbox: (145, 350, 263, 556)
+  affine:
+[[ 4.356888e-01  6.921152e-03  1.453982e+02]
+ [-9.007469e-04  4.527584e-01  3.502707e+02]]
+
+Detection 9
+  score: 2.6506
+  inliers: 32
+  mean reprojection error: 1.0545 px
+  scale (sqrt|det|): 0.4446
+  rotation estimate: 6.06 deg
+  bbox: (229, 347, 340, 576)
+  affine:
+[[ 4.144173e-01 -2.148968e-03  2.308183e+02]
+ [ 4.402936e-02  4.768451e-01  3.475648e+02]]
+
+Detection 10
+  score: 2.3488
+  inliers: 18
+  mean reprojection error: 0.5749 px
+  scale (sqrt|det|): 0.3942
+  rotation estimate: 2.71 deg
+  bbox: (51, 343, 157, 540)
+  affine:
+[[3.675967e-01 1.977902e-02 5.165296e+01]
+ [1.737605e-02 4.236249e-01 3.431084e+02]]
+
+Detection 11
+  score: 2.0961
+  inliers: 22
+  mean reprojection error: 0.7404 px
+  scale (sqrt|det|): 0.4353
+  rotation estimate: 357.44 deg
+  bbox: (83, 64, 197, 278)
+  affine:
+[[ 4.134131e-01  1.121783e-02  8.316124e+01]
+ [-1.844986e-02  4.578854e-01  6.970710e+01]]
+
+Detection 12
+  score: 1.6938
+  inliers: 9
+  mean reprojection error: 0.8513 px
+  scale (sqrt|det|): 0.4260
+  rotation estimate: 15.61 deg
+  bbox: (315, 342, 413, 593)
+  affine:
+[[ 3.703489e-01 -1.306459e-03  3.158562e+02]
+ [ 1.035073e-01  4.896997e-01  3.429704e+02]]
+
+Detection 13
+  score: 1.3863
+  inliers: 3
+  mean reprojection error: 0.0000 px
+  scale (sqrt|det|): 0.4164
+  rotation estimate: 357.45 deg
+  bbox: (0, 403, 106, 599)
+  affine:
+[[ 3.780375e-01 -2.550247e-02  6.883712e+00]
+ [-1.682955e-02  4.597417e-01  4.082517e+02]]
+

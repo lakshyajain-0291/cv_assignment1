@@ -1,0 +1,37 @@
+Detection summary
+=================
+count: 3
+
+Detection 1
+  score: 2.1382
+  inliers: 19
+  mean reprojection error: 2.2874 px
+  scale (sqrt|det|): 0.2614
+  rotation estimate: 205.43 deg
+  bbox: (1321, 685, 1559, 1029)
+  affine:
+[[-2.934562e-01  8.866439e-02  1.421134e+03]
+ [-1.395484e-01 -1.906016e-01  1.028116e+03]]
+
+Detection 2
+  score: 1.6469
+  inliers: 15
+  mean reprojection error: 2.2758 px
+  scale (sqrt|det|): 0.2007
+  rotation estimate: 77.50 deg
+  bbox: (929, 123, 1276, 194)
+  affine:
+[[ 4.190096e-02 -2.142695e-01  1.261542e+03]
+ [ 1.889397e-01 -4.457304e-03  1.299105e+02]]
+
+Detection 3
+  score: 1.5432
+  inliers: 27
+  mean reprojection error: 2.4355 px
+  scale (sqrt|det|): 0.2790
+  rotation estimate: 194.02 deg
+  bbox: (0, 406, 191, 843)
+  affine:
+[[-3.141055e-01 -6.606864e-02  1.901238e+02]
+ [-7.841389e-02 -2.643955e-01  8.424943e+02]]
+
