@@ -1,3 +1,16 @@
+---
+title: "Assignment 1 Report"
+subtitle: "Multi-Instance Object Recognition in Cluttered Scenes"
+author: "Lakshya Jain (B2CS1032)"
+date: "Sept 2026"
+geometry: margin=0.8in
+fontsize: 11pt
+documentclass: article
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+---
+
 # Assignment 1 Report — Multi-Instance Object Recognition in Cluttered Scenes
 
 - **Student:** Lakshya Jain (B2CS1032)
@@ -14,31 +27,7 @@ The required pipeline is based on SIFT local features, manual descriptor matchin
 
 ## 2. Pipeline overview
 
-```mermaid
-flowchart TD
-    A[Template image] --> B[SIFT extraction]
-    C[Cluttered query image] --> D[SIFT extraction]
-    B --> E[Template descriptors]
-    D --> F[Scene descriptors]
-    E --> G[Manual L2 distances]
-    F --> G
-    G --> H[Lowe ratio test]
-    H --> I[Scene-to-template matches]
-    I --> J[4-D Hough voting]
-    J --> K[Strongest parameter-space peak]
-    K --> L[Local cluster of candidate matches]
-    L --> M[RANSAC affine estimation]
-    M --> N[Least-squares refinement]
-    N --> O[Geometric sanity checks]
-    O --> P{Valid detection?}
-    P -- No --> K
-    P -- Yes --> Q[Project template corners]
-    Q --> R[Remove geometric inliers]
-    R --> J
-    R --> S[Candidate detections]
-    S --> T[IoU NMS]
-    T --> U[Final bounding polygons / boxes]
-```
+![Pipeline overview](mermaids/pipeline.png)
 
 ## 3. Why SIFT?
 
@@ -124,14 +113,12 @@ This is consistent with the classical local-feature recognition pipeline describ
 
 For a planar object, we model the template-to-scene mapping as:
 
+For a planar object, we model the template-to-scene mapping as:
+
 $$
-\begin{bmatrix}u\\v\end{bmatrix}
-=
-\begin{bmatrix}
-a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}
-+
-\begin{bmatrix}b_1\\b_2\end{bmatrix}.
+u=a_{11}x+a_{12}y+b_1,
+\qquad
+v=a_{21}x+a_{22}y+b_2.
 $$
 
 With parameter vector
@@ -199,19 +186,7 @@ The anisotropy test is based on the singular values of the 2×2 linear component
 
 After accepting one object instance, its geometrically verified matches are removed from the remaining match set. The Hough accumulator is rebuilt and the next strongest cluster is processed.
 
-```mermaid
-flowchart LR
-    A[All ratio-test matches] --> B[Hough peak 1]
-    B --> C[RANSAC + LS]
-    C --> D[Detection 1]
-    D --> E[Remove inlier matches]
-    E --> F[Rebuild Hough space]
-    F --> G[Hough peak 2]
-    G --> H[RANSAC + LS]
-    H --> I[Detection 2]
-    I --> J[Remove inliers]
-    J --> K[Repeat until no peak has >= 3 votes]
-```
+![Pipeline overview](mermaids/extraction.png)
 
 This is the required greedy extraction loop and allows several physical instances to be recovered from one query image.
 
@@ -237,21 +212,25 @@ NMS proceeds greedily:
 
 ### Naive feature matching
 
-![Naive ratio-test correspondences](output/final/naive_matches.jpg)
+![Naive feature matching](output/final/naive_matches.jpg){ width=0.85\textwidth }
 
 The naive visualization intentionally shows every ratio-test correspondence. It is expected to contain many unrelated lines caused by repeated textures, edges, text, background patterns and accidental descriptor similarity.
 
 ### Final detections
 
-![Final detections](output/final/final_detections.jpg)
+![Final detections](output/final/final_detections.jpg){ width=0.85\textwidth }
 
 The final visualization contains the three accepted object instances, with projected template boundaries and minimal visual clutter.
 
 ### SIFT visualization
 
-![Template SIFT keypoints](output/final/template_sift_keypoints.jpg)
+![Template Sift Keypoints](output/final/template_sift_keypoints.jpg){ width=0.85\textwidth }
 
-![Scene SIFT keypoints](output/final/scene_sift_keypoints.jpg)
+![Scene Sift Keypoints](output/final/scene_sift_keypoints.jpg){ width=0.85\textwidth }
+
+<!-- <img src="output/final/template_sift_keypoints.jpg" alt="Template Sift Keypoints" width="100">
+
+<img src="output/final/scene_sift_keypoints.jpg" alt="Scene Sift Keypoints" width="700"> -->
 
 ## 13. Experimental results
 
